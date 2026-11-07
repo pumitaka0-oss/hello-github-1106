@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>やることリスト | GitHub練習</title>
+    <link rel="stylesheet" href="todo.css" />
+    <script src="todo.js" defer></script>
+  </head>
+  <body>
+    <main class="app">
+      <a class="back" href="index.html">← ホームページへ戻る</a>
+      <p class="eyebrow">MY LITTLE TO DO LIST</p>
+      <h1>今日の、やること。</h1>
+      <p class="intro">思いついたことをひとつずつ。終わったらチェックを入れよう。</p>
+
+      <form id="todo-form">
+        <label for="todo-input">新しいやること</label>
+        <div class="input-row">
+          <input id="todo-input" name="todo" type="text" maxlength="100" placeholder="例：好きな漫画を読む" required />
+          <button type="submit">追加する ＋</button>
+        </div>
+      </form>
+
+      <section aria-labelledby="list-heading">
+        <div class="list-heading"><h2 id="list-heading">リスト</h2><span id="remaining" aria-live="polite">0 件</span></div>
+        <p id="empty-message" class="empty">まだ何もありません。最初のやることを追加してみよう。</p>
+        <ul id="todo-list"></ul>
+      </section>
+      <p class="hint">このリストは、今使っているブラウザーに保存されます。</p>
+    </main>
+  </body>
+</html>
